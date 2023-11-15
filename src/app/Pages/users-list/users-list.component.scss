@@ -1,0 +1,28 @@
+.card {
+  box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+}
+
+.mat-column-SrNo,
+.mat-column-firstName,
+.mat-column-lastName,
+.mat-column-email,
+.mat-column-contactNo,
+.mat-column-address,
+.mat-column-Actions {
+  flex: 1;
+  min-width: 0;
+}
+
+.mat-column-address {
+  flex: 0px 0px 10% !important;
+  width: 16%;
+}

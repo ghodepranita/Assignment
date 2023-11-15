@@ -1,0 +1,304 @@
+<div class="card">
+  <div class="card-header">
+    <h2>User Registration</h2>
+  </div>
+  <div class="card-body">
+    <section class="vh-100 container-fluid">
+      <div class="mask d-flex h-100 gradient-custom-3">
+        <div class="container h-100">
+          <div class="row">
+            <div class="col-12 mt-5">
+              <div class="card" style="border-radius: 15px">
+                <div class="card-body p-5">
+                  <form
+                    (ngSubmit)="submitData()"
+                    [formGroup]="registrationForm"
+                    autocomplete="off"
+                  >
+                    <div class="row">
+                      <div class="col">
+                        <label class="form-label" for="form3Example1cg">
+                          <span class="text-danger"> * </span>First Name</label
+                        >
+                        <input
+                          type="text"
+                          id="form3Example1cg"
+                          class="form-control form-control-lg"
+                          formControlName="firstName"
+                        />
+                        <small
+                          class="text-danger"
+                          *ngIf="
+                            registrationForm.get('firstName')?.invalid &&
+                            (registrationForm.get('firstName')?.touched ||
+                              registrationForm.get('firstName')?.dirty)
+                          "
+                        >
+                          Please enter a valid first name.
+                        </small>
+                      </div>
+                      <div class="col">
+                        <label class="form-label" for="form3Example1cg">
+                          <span class="text-danger"> * </span>Last Name</label
+                        >
+                        <input
+                          type="text"
+                          id="form3Example1cg"
+                          class="form-control form-control-lg"
+                          formControlName="lastName"
+                        />
+                        <small
+                          class="text-danger"
+                          *ngIf="
+                            registrationForm.get('lastName')?.invalid &&
+                            (registrationForm.get('lastName')?.touched ||
+                              registrationForm.get('lastName')?.dirty)">
+                          Please enter a valid last name.
+                        </small>
+                      </div>
+
+                      <div class="col">
+                        <label class="form-label" for="form3Example3cg">
+                          <span class="text-danger"> * </span>Your Email</label
+                        >
+                        <input
+                          type="email"
+                          id="form3Example3cg"
+                          class="form-control form-control-lg"
+                          formControlName="email"
+                        />
+                        <small
+                          class="text-danger"
+                          *ngIf="
+                            registrationForm.get('email')?.invalid &&
+                            (registrationForm.get('email')?.touched ||
+                              registrationForm.get('email')?.dirty)
+                          "
+                        >
+                          Please enter a valid email address.
+                        </small>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col">
+                        <label class="form-label" for="form3Example3cg">
+                          <span class="text-danger"> * </span>Contact No
+                        </label>
+                        <input
+                          type="text"
+                          id="form3Example3cg"
+                          class="form-control form-control-lg"
+                          formControlName="contactNo"
+                          (keypress)="numberOnly($event)"
+                        />
+                        <small
+                          class="text-danger"
+                          *ngIf="
+                            registrationForm.get('contactNo')?.invalid &&
+                            (registrationForm.get('contactNo')?.touched ||
+                              registrationForm.get('contactNo')?.dirty)
+                          "
+                        >
+                          Please enter a valid phone no.
+                        </small>
+                      </div>
+
+                      <div class="col">
+                        <label class="form-label" for="form3Example4cg"
+                          >Address</label
+                        >
+                        <textarea
+                          id="form3Example4cg"
+                          class="form-control form-control-lg"
+                          formControlName="address"
+                        ></textarea>
+                      </div>
+                      <div class="col mb-4">
+                        <label class="form-label" for="form3Example4cdg">
+                          <span class="text-danger"> * </span>password</label
+                        >
+                        <input
+                          type="password"
+                          id="form3Example4cdg"
+                          class="form-control form-control-lg"
+                          formControlName="password"
+                        />
+                        <small
+                          class="text-danger"
+                          *ngIf="
+                            registrationForm.get('password')?.invalid &&
+                            (registrationForm.get('password')?.touched ||
+                              registrationForm.get('password')?.dirty)
+                          "
+                        >
+                          Please enter a valid password.
+                        </small>
+                      </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center mt-5">
+                      <button  type="submit" mat-raised-button color="primary" style="margin-right: 10px"
+                      [disabled]="!registrationForm.valid"
+                        title="click to register">Register</button>
+                      <button mat-raised-button color="warn" (click)="this.clearFormDataAndRedirect()" title="clear form">Cancel</button>
+                    </div>
+
+                    <p class="text-center text-muted mt-5 mb-0">
+                      Have already an account?
+                      <a href="#!" class="fw-bold text-body"
+                        ><u>Login here</u></a
+                      >
+                    </p>
+                  </form>
+                  <mat-progress-spinner *ngIf="isLoading" class="spin" color="primary" mode="indeterminate" diameter="40"
+                  strokeWidth="5"></mat-progress-spinner>
+        
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- <div class="card">
+  <div class="card-header">
+    <h2>User Registration</h2>
+  </div>
+  <div class="card-body">
+    <section class="vh-100 bg-image container-fluid">
+      <div class="mask d-flex h-100 gradient-custom-3">
+        <div class="container h-100">
+          <div class="row">
+            <div class="col-12 mt-5">
+              <div class="card" style="border-radius: 15px">
+                <div class="card-body p-5">
+                  <form
+                    (ngSubmit)="submitData()"
+                    [formGroup]="registrationForm"
+                    autocomplete="off"
+                  >
+                    <div class="row">
+                      <div class="col">
+                        <mat-form-field appearance="fill">
+                          <mat-label><span class="text-danger"> * </span>First Name</mat-label>
+                          <input
+                            matInput
+                            type="text"
+                            formControlName="firstName"
+                          />
+                          <mat-error *ngIf="registrationForm.get('firstName')?.hasError('required')">
+                            Please enter a valid first name.
+                          </mat-error>
+                        </mat-form-field>
+                      </div>
+                      <div class="col">
+                        <mat-form-field appearance="fill">
+                          <mat-label><span class="text-danger"> * </span>Last Name</mat-label>
+                          <input
+                            matInput
+                            type="text"
+                            formControlName="lastName"
+                          />
+                          <mat-error *ngIf="registrationForm.get('lastName')?.hasError('required')">
+                            Please enter a valid last name.
+                          </mat-error>
+                        </mat-form-field>
+                      </div>
+
+                      <div class="col">
+                        <mat-form-field appearance="fill">
+                          <mat-label><span class="text-danger"> * </span>Your Email</mat-label>
+                          <input
+                            matInput
+                            type="email"
+                            formControlName="email"
+                          />
+                          <mat-error *ngIf="registrationForm.get('email')?.hasError('required')">
+                            Please enter a valid email address.
+                          </mat-error>
+                        </mat-form-field>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col">
+                        <mat-form-field appearance="fill">
+                          <mat-label><span class="text-danger"> * </span>Contact No</mat-label>
+                          <input
+                            matInput
+                            type="text"
+                            formControlName="contactNo"
+                            (keypress)="numberOnly($event)"
+                          />
+                          <mat-error *ngIf="registrationForm.get('contactNo')?.hasError('required')">
+                            Please enter a valid phone no.
+                          </mat-error>
+                        </mat-form-field>
+                      </div>
+
+                      <div class="col">
+                        <mat-form-field appearance="fill">
+                          <mat-label>Address</mat-label>
+                          <textarea
+                            matInput
+                            formControlName="address"
+                          ></textarea>
+                        </mat-form-field>
+                      </div>
+                      <div class="col mb-4">
+                        <mat-form-field appearance="fill">
+                          <mat-label><span class="text-danger"> * </span>Password</mat-label>
+                          <input
+                            matInput
+                            type="password"
+                            formControlName="password"
+                          />
+                          <mat-error *ngIf="registrationForm.get('password')?.hasError('required')">
+                            Please enter a valid password.
+                          </mat-error>
+                        </mat-form-field>
+                      </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center mt-5">
+                      <button
+                        type="submit"
+                        mat-raised-button
+                        color="primary"
+                        style="margin-right: 10px"
+                        [disabled]="!registrationForm.valid"
+                        title="click to register"
+                      >
+                        Register
+                      </button>
+                      <button
+                        mat-raised-button
+                        color="warn"
+                        (click)="this.clearFormData()"
+                        title="clear form"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+
+                    <p class="text-center text-muted mt-5 mb-0">
+                      Have already an account?
+                      <a href="#!" class="fw-bold text-body"
+                        ><u>Login here</u></a
+                      >
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div> -->
