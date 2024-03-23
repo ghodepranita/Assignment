@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "firstName": "aa",
+      "lastName": "bb",
+      "email": "khandare@gmail.com",
+      "contactNo": "8787843478",
+      "password": "Nitesh@gmail.com",
+      "address": "jfdjafjdhfds",
+      "id": "cb70"
+    },
+    {
+      "firstName": "Nitesh",
+      "lastName": "Khandare",
+      "email": "khandare@gmail.com",
+      "contactNo": "1222222222",
+      "password": "Nitesh@gmail.com",
+      "address": "gkdfkgfkjfdg",
+      "id": "dd48"
+    },
+    {
+      "id": "c6e1",
+      "firstName": "Pranita",
+      "lastName": "Ghode",
+      "email": "khandare@gmail.com",
+      "contactNo": "98495489594",
+      "password": "Nitesh@gmail.com",
+      "address": "fksjfjdskfsj"
+    },
+    {
+      "id": "a280",
+      "firstName": "fkjdsnfjds",
+      "lastName": "jhfjdhfj",
+      "email": "khandare@gmail.com",
+      "contactNo": "878457845874",
+      "password": "Nitesh@gmail.com",
+      "address": "jgfjdsfjsfsh"
+    },
+    {
+      "firstName": "Ashish",
+      "lastName": "ashish",
+      "email": "khandare@gmail.com",
+      "contactNo": "8787878843",
+      "password": "Nitesh@gmail.com",
+      "address": "pune1",
+      "id": "5b6c"
+    }
+  ]
+}

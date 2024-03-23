@@ -10,13 +10,14 @@ import { ToastrModule } from 'ngx-toastr';
 import { UserRegistrationFormComponent } from './Pages/user-registration-form/user-registration-form.component';
 import { UsersListComponent } from './Pages/users-list/users-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatInputModule} from '@angular/material/input';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatProgressSpinnerModule,
     MatInputModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
