@@ -60,7 +60,7 @@ export class UsersListComponent implements OnInit, AfterViewInit, OnDestroy {
         this.chRef.detectChanges();
       }
     });
-
+    this.isLoading = false;
     this.subscriptions.push(sub);
   }
 
