@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-header">
-    <h2>User Registration</h2>
+    <h2>User Form</h2>
   </div>
   <div class="card-body">
     <section class="vh-100 container-fluid">
@@ -10,73 +10,45 @@
             <div class="col-12 mt-5">
               <div class="card" style="border-radius: 15px">
                 <div class="card-body p-5">
-                  <form
-                    (ngSubmit)="submitData()"
-                    [formGroup]="registrationForm"
-                    autocomplete="off"
-                  >
+                  <form (ngSubmit)="submitData()" [formGroup]="registrationForm" autocomplete="off">
                     <div class="row">
                       <div class="col">
                         <label class="form-label" for="form3Example1cg">
-                          <span class="text-danger"> * </span>First Name</label
-                        >
-                        <input
-                          type="text"
-                          id="form3Example1cg"
-                          class="form-control form-control-lg"
-                          formControlName="firstName"
-                        />
-                        <small
-                          class="text-danger"
-                          *ngIf="
+                          <span class="text-danger"> * </span>First Name</label>
+                        <input type="text" id="form3Example1cg" class="form-control form-control-lg"
+                          formControlName="firstName" />
+                        <small class="text-danger" *ngIf="
                             registrationForm.get('firstName')?.invalid &&
                             (registrationForm.get('firstName')?.touched ||
                               registrationForm.get('firstName')?.dirty)
-                          "
-                        >
+                          ">
                           Please enter a valid first name.
                         </small>
                       </div>
                       <div class="col">
                         <label class="form-label" for="form3Example1cg">
-                          <span class="text-danger"> * </span>Last Name</label
-                        >
-                        <input
-                          type="text"
-                          id="form3Example1cg"
-                          class="form-control form-control-lg"
-                          formControlName="lastName"
-                        />
-                        <small
-                          class="text-danger"
-                          *ngIf="
+                          <span class="text-danger"> * </span>Last Name</label>
+                        <input type="text" id="form3Example1cg" class="form-control form-control-lg"
+                          formControlName="lastName" />
+                        <small class="text-danger" *ngIf="
                             registrationForm.get('lastName')?.invalid &&
                             (registrationForm.get('lastName')?.touched ||
                               registrationForm.get('lastName')?.dirty)
-                          "
-                        >
+                          ">
                           Please enter a valid last name.
                         </small>
                       </div>
 
                       <div class="col">
                         <label class="form-label" for="form3Example3cg">
-                          <span class="text-danger"> * </span>Your Email</label
-                        >
-                        <input
-                          type="email"
-                          id="form3Example3cg"
-                          class="form-control form-control-lg"
-                          formControlName="email"
-                        />
-                        <small
-                          class="text-danger"
-                          *ngIf="
+                          <span class="text-danger"> * </span>Your Email</label>
+                        <input type="email" id="form3Example3cg" class="form-control form-control-lg"
+                          formControlName="email" />
+                        <small class="text-danger" *ngIf="
                             registrationForm.get('email')?.invalid &&
                             (registrationForm.get('email')?.touched ||
                               registrationForm.get('email')?.dirty)
-                          "
-                        >
+                          ">
                           Please enter a valid email address.
                         </small>
                       </div>
@@ -87,26 +59,35 @@
                         <label class="form-label" for="form3Example3cg">
                           <span class="text-danger"> * </span>Contact No
                         </label>
-                        <input
-                          type="text"
-                          id="form3Example3cg"
-                          class="form-control form-control-lg"
-                          formControlName="contactNo"
-                          (keypress)="numberOnly($event)"
-                        />
-                        <small
-                          class="text-danger"
-                          *ngIf="
+                        <input type="text" id="form3Example3cg" class="form-control form-control-lg"
+                          formControlName="contactNo" (keypress)="numberOnly($event)" />
+                        <small class="text-danger" *ngIf="
                             registrationForm.get('contactNo')?.invalid &&
                             (registrationForm.get('contactNo')?.touched ||
                               registrationForm.get('contactNo')?.dirty)
-                          "
-                        >
+                          ">
                           Please enter a valid phone no.
                         </small>
                       </div>
-
+                      <!-- <div class="col">
+                        <label for="imageUpload">Profile Picture</label>
+                        <input type="file" id="imageUpload" formControlName="image" (change)="onFileSelected($event)" accept="image/*">
+                        <div *ngIf="registrationForm.get('image')?.invalid && registrationForm.get('image')?.touched" class="text-danger">
+                          Please upload a valid image.
+                        </div>
+                      </div> -->
                       <div class="col">
+                        <label for="imageUpload">Profile Picture</label>
+                        <input type="file" id="imageUpload" accept="image/*" class="form-control"
+                          (change)="onFileSelected($event)">
+                        <img *ngIf="imageUrl" [src]="imageUrl" alt="Selected Image" width="100" height="100">
+
+                      </div>
+                      <div class="col">
+
+                      </div>
+
+                      <!-- <div class="col">
                         <label class="form-label" for="form3Example4cg"
                           >Address</label
                         >
@@ -115,8 +96,8 @@
                           class="form-control form-control-lg"
                           formControlName="address"
                         ></textarea>
-                      </div>
-                      <div class="col mb-4">
+                      </div> -->
+                      <!-- <div class="col mb-4">
                         <label class="form-label" for="form3Example4cdg">
                           <span class="text-danger"> * </span>password</label
                         >
@@ -136,38 +117,22 @@
                         >
                           Please enter a valid password.
                         </small>
-                      </div>
+                      </div> -->
                     </div>
 
                     <div class="d-flex justify-content-center mt-5">
-                      <button
-                        type="submit"
-                        mat-raised-button
-                        color="primary"
-                        style="margin-right: 10px"
-                        [disabled]="!registrationForm.valid"
-                        title="click to register"
-                      >
-                        Register
+                      <button type="submit" mat-raised-button color="primary" style="margin-right: 10px"
+                        [disabled]="!registrationForm.valid" title="click to register">
+                        Save
                       </button>
-                      <button
-                        mat-raised-button
-                        color="warn"
-                        (click)="this.clearFormDataAndRedirect()"
-                        title="clear form"
-                      >
+                      <button mat-raised-button color="warn" (click)="this.clearFormDataAndRedirect()"
+                        title="clear form">
                         Cancel
                       </button>
                     </div>
                   </form>
-                  <mat-progress-spinner
-                    *ngIf="isLoading"
-                    class="spin"
-                    color="primary"
-                    mode="indeterminate"
-                    diameter="40"
-                    strokeWidth="5"
-                  ></mat-progress-spinner>
+                  <mat-progress-spinner *ngIf="isLoading" class="spin" color="primary" mode="indeterminate"
+                    diameter="40" strokeWidth="5"></mat-progress-spinner>
                 </div>
               </div>
             </div>

@@ -1,49 +1,67 @@
 {
   "posts": [
     {
-      "firstName": "aa",
-      "lastName": "bb",
-      "email": "khandare@gmail.com",
-      "contactNo": "8787843478",
-      "password": "Nitesh@gmail.com",
-      "address": "jfdjafjdhfds",
-      "id": "cb70"
+      "id": "5ddf",
+      "firstName": "asfh",
+      "lastName": "gyhsh",
+      "email": "gg@gmail.com",
+      "contactNo": "88888787777",
+      "imageName": "2023-08-10 (2).png",
+      "imagePath": "C:UsersAdminOneDrivePicturesScreenshots/2023-08-10 (2).png"
     },
     {
-      "firstName": "Nitesh",
-      "lastName": "Khandare",
-      "email": "khandare@gmail.com",
-      "contactNo": "1222222222",
-      "password": "Nitesh@gmail.com",
-      "address": "gkdfkgfkjfdg",
-      "id": "dd48"
-    },
-    {
-      "id": "c6e1",
-      "firstName": "Pranita",
+      "id": "7b08",
+      "firstName": "pranita",
       "lastName": "Ghode",
-      "email": "khandare@gmail.com",
-      "contactNo": "98495489594",
-      "password": "Nitesh@gmail.com",
-      "address": "fksjfjdskfsj"
+      "email": "p@gmail.com",
+      "contactNo": "8385445345",
+      "imageName": "2023-08-10 (2).png",
+      "imagePath": "C:UsersAdminOneDrivePicturesScreenshots/2023-08-10 (2).png"
     },
     {
-      "id": "a280",
-      "firstName": "fkjdsnfjds",
-      "lastName": "jhfjdhfj",
-      "email": "khandare@gmail.com",
-      "contactNo": "878457845874",
-      "password": "Nitesh@gmail.com",
-      "address": "jgfjdsfjsfsh"
+      "id": "6b96",
+      "firstName": "joya",
+      "lastName": "vidya",
+      "email": "z@gmail.com",
+      "contactNo": "8348384444",
+      "imageName": "",
+      "imagePath": "assets/UploadImages/2023-08-10 (1).png"
     },
     {
-      "firstName": "Ashish",
-      "lastName": "ashish",
-      "email": "khandare@gmail.com",
-      "contactNo": "8787878843",
-      "password": "Nitesh@gmail.com",
-      "address": "pune1",
-      "id": "5b6c"
+      "id": "7517",
+      "firstName": "nitesg",
+      "lastName": "dg",
+      "email": "f@gmil.com",
+      "contactNo": "4343434234",
+      "imageName": "",
+      "imagePath": "assets/UploadImages/2023-08-10 (2).png"
+    },
+    {
+      "id": "9deb",
+      "firstName": "test",
+      "lastName": "test2",
+      "email": "t@gmail.com",
+      "contactNo": "56565656565",
+      "imageName": "",
+      "imagePath": "assets/UploadImages/2023-08-10 (1).png"
+    },
+    {
+      "id": "b6b6",
+      "firstName": "xyz",
+      "lastName": "yyy",
+      "email": "ee@gmail.com",
+      "contactNo": "3499539455",
+      "imageName": "2023-08-10 (2).png",
+      "imagePath": "assets/UploadImages/2023-08-10 (2).png"
+    },
+    {
+      "id": "af9a",
+      "firstName": "uuyu",
+      "lastName": "hjhj",
+      "email": "hgh@gmail.com",
+      "contactNo": "7688787888",
+      "imageName": "2023-08-10 (1).png",
+      "imagePath": "assets/UploadImages/2023-08-10 (1).png"
     }
   ]
 }

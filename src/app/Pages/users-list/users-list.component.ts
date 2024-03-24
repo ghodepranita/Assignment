@@ -14,7 +14,7 @@ import { Subscription } from 'rxjs';
 })
 export class UsersListComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  displayedColumnsForApi = ['SrNo', 'firstName', 'lastName', 'email', 'contactNo', 'address', 'Action'];
+  displayedColumnsForApi = ['SrNo', 'firstName', 'lastName', 'email', 'contactNo', 'Action'];
   @ViewChild('paginator') paginator!: MatPaginator;
   @ViewChild('Sort') Sort!: MatSort;
   public DataSource = new MatTableDataSource<any>();
@@ -32,6 +32,7 @@ export class UsersListComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     this.GetUsersList();
+    
   }
 
   ngAfterViewInit(): void {
@@ -81,8 +82,9 @@ export class UsersListComponent implements OnInit, AfterViewInit, OnDestroy {
 
   editUser(row: any) {
     debugger
+    debugger
     console.log('row', row);
-    this.router.navigate(['/edit-user', row.id]);
+    this.router.navigate(['/edit-user', row.id,{ imageData: row.imagePath }]);
   }
 
   deleteUser(id: string): void {
