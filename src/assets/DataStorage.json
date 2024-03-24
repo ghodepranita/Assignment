@@ -1,67 +1,22 @@
 {
   "posts": [
     {
-      "id": "5ddf",
-      "firstName": "asfh",
-      "lastName": "gyhsh",
-      "email": "gg@gmail.com",
-      "contactNo": "88888787777",
-      "imageName": "2023-08-10 (2).png",
-      "imagePath": "C:UsersAdminOneDrivePicturesScreenshots/2023-08-10 (2).png"
-    },
-    {
-      "id": "7b08",
-      "firstName": "pranita",
+      "id": "265c",
+      "firstName": "Pranita",
       "lastName": "Ghode",
-      "email": "p@gmail.com",
-      "contactNo": "8385445345",
-      "imageName": "2023-08-10 (2).png",
-      "imagePath": "C:UsersAdminOneDrivePicturesScreenshots/2023-08-10 (2).png"
-    },
-    {
-      "id": "6b96",
-      "firstName": "joya",
-      "lastName": "vidya",
-      "email": "z@gmail.com",
-      "contactNo": "8348384444",
-      "imageName": "",
-      "imagePath": "assets/UploadImages/2023-08-10 (1).png"
-    },
-    {
-      "id": "7517",
-      "firstName": "nitesg",
-      "lastName": "dg",
-      "email": "f@gmil.com",
-      "contactNo": "4343434234",
-      "imageName": "",
-      "imagePath": "assets/UploadImages/2023-08-10 (2).png"
-    },
-    {
-      "id": "9deb",
-      "firstName": "test",
-      "lastName": "test2",
-      "email": "t@gmail.com",
-      "contactNo": "56565656565",
-      "imageName": "",
-      "imagePath": "assets/UploadImages/2023-08-10 (1).png"
-    },
-    {
-      "id": "b6b6",
-      "firstName": "xyz",
-      "lastName": "yyy",
-      "email": "ee@gmail.com",
-      "contactNo": "3499539455",
+      "email": "pranita@gmail.com",
+      "contactNo": "8625977946",
       "imageName": "2023-08-10 (2).png",
       "imagePath": "assets/UploadImages/2023-08-10 (2).png"
     },
     {
-      "id": "af9a",
-      "firstName": "uuyu",
-      "lastName": "hjhj",
-      "email": "hgh@gmail.com",
-      "contactNo": "7688787888",
-      "imageName": "2023-08-10 (1).png",
-      "imagePath": "assets/UploadImages/2023-08-10 (1).png"
+      "id": "cd20",
+      "firstName": "Test",
+      "lastName": "TestData",
+      "email": "T@gmail.com",
+      "contactNo": "7788447444",
+      "imageName": "Test_Result.PNG",
+      "imagePath": "assets/UploadImages/Test_Result.PNG"
     }
   ]
 }

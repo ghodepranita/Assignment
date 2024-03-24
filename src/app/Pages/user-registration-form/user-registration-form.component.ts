@@ -51,12 +51,9 @@ export class UserRegistrationFormComponent implements OnInit, OnDestroy {
       ],
           imageName: [''],
       imagePath: ['']
-      // password: ['', [Validators.required, Validators.minLength(6)]],
-      // address: ['']
     });
     const imageData = this.route.snapshot.paramMap.get('imageData');
     if (imageData) {
-      // Display the image preview
       this.imageUrl = imageData;
     }
     const userId = this.route.snapshot.paramMap.get('id');
@@ -134,65 +131,16 @@ export class UserRegistrationFormComponent implements OnInit, OnDestroy {
   }
 
 
-
-
-
-// onFileSelected(event: any) {
-//   const file = event.target.files[0];
-//   if (file) {
-//     const imageName = file.name;
-//     const imagePath = `C:\Users\Admin\OneDrive\Pictures\Screenshots/${imageName}`; // Adjust the path as needed
-//     console.log('Image Name:', imageName);
-//     console.log('Image Path:', imagePath);
-//     this.registrationForm.patchValue({
-//       imageName: imageName,
-//       imagePath: imagePath
-//     });
-//   }
-// }
-
-
-// onFileSelected(event: any) {
-//   const file = event.target.files[0];
-//   if (file) {
-//     const reader = new FileReader();
-//     reader.readAsDataURL(file);
-//     reader.onload = () => {
-//       const imageData = reader.result as string;
-//       localStorage.setItem('imageData', imageData);
-//       this.imageUrl = imageData; // Display the selected image
-//     };
-//   }
-// }
-
-// onFileSelected(event: any) {
-//   const file = event.target.files[0];
-//   if (file) {
-//     const imagePath = `assets/UploadImages/${file.name}`;
-//     this.registrationForm.patchValue({ imagePath: imagePath });
-//     // Optionally, you can display a preview of the selected image
-//     const reader = new FileReader();
-//     reader.readAsDataURL(file);
-//     reader.onload = () => {
-//       this.imageUrl = reader.result as string;
-//     };
-//   }
-// }
-
-
 onFileSelected(event: any): void {
   const file = event.target.files[0];
   if (file) {
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = () => {
-      // Save the image data (base64 string) to a variable or property
       this.imageData = reader.result as string;
-      // Save the image path and name to your form or wherever you need
       const imageName = file.name;
       const imagePath = `assets/UploadImages/${imageName}`;
       this.registrationForm.patchValue({ imageName, imagePath });
-      // Optionally, you can also display a preview of the selected image
       this.imageUrl = this.imageData;
     };
   }
