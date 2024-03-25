@@ -18,13 +18,18 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
+import { ParentComponentComponent } from './Pages/parent-component/parent-component.component';
+import { ChildComponentComponent } from './Pages/child-component/child-component.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UserRegistrationFormComponent,
-    UsersListComponent
+    UsersListComponent,
+    ParentComponentComponent,
+    ChildComponentComponent,
   ],
   imports: [
     CommonModule,
